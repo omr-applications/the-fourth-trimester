@@ -1,7 +1,7 @@
 const bookingConfig = {
   providerName: "Bookwhen",
   providerUrl: "https://bookwhen.com/",
-  paymentNote: "Live programme dates and payment options will appear here as soon as booking opens.",
+  paymentNote: "Bookings for the 5 October to 14 December programme will appear here as soon as the payment link is connected.",
 };
 
 const navToggle = document.querySelector(".nav-toggle");
@@ -39,10 +39,12 @@ if (bookingForm && summary) {
     const data = Object.fromEntries(new FormData(bookingForm).entries());
     const selectedProgramme = data.programme || "10-session programme";
     const selectedPlaces = data.places || "1";
-    const selectedStart = data.startDate || "Next available start date";
+    const selectedStart = data.startDate || "5 October to 14 December";
+    const selectedAge = data.ageGroup || "0-3 months";
 
     summary.innerHTML = `
       <p><strong>Programme:</strong> ${selectedProgramme}</p>
+      <p><strong>Age group:</strong> ${selectedAge}</p>
       <p><strong>Places:</strong> ${selectedPlaces}</p>
       <p><strong>Preferred start:</strong> ${selectedStart}</p>
       <p class="small">Payment and confirmation happen through the live booking provider once connected.</p>

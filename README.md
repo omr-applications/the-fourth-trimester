@@ -22,7 +22,7 @@ Update `script.js`:
 const bookingConfig = {
   providerName: "Bookwhen",
   providerUrl: "https://bookwhen.com/",
-  paymentNote: "Live programme dates and payment options will appear here as soon as booking opens.",
+  paymentNote: "Bookings for the 5 October to 14 December programme will appear here as soon as the payment link is connected.",
 };
 ```
 
